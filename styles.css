@@ -40,7 +40,7 @@ form{
     display: flex;
     flex-direction: column;
     gap: 5px;
-    align-items: center;
+    /* align-items: center; */
 }
 
 label{
@@ -54,8 +54,12 @@ label{
     display: block;
     font-style: italic;
 }
+.input-group{
+    display: flex;
+    flex-direction: column;
+}
 
-input{
+input, textarea{
     border-style: none;
     width: 100%;
     margin: 10px 0;
@@ -78,18 +82,21 @@ input:focus, textarea:focus{
     font-size: 16px;
     font-weight: 600;
     border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 button:hover{
     background-color: #53868b;
 }
-textarea{
-    border-style: none;
-    width: 100%;
-    border-bottom: 2px solid #ccc;
-    font-size: 16px;
+
+.error{
+    display: none;
+    font-style: italic;
+    color: red;
+    text-align: end;
+}
+
+#submit-error{
+    text-align: left;
+    margin: 0px;
 }
