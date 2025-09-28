@@ -16,12 +16,12 @@
       <form action="">
         <div class="input-group">
           <label for="username">Username</label>
-          <input type="text" id="username" placeholder="Enter your username" />
+          <input type="text" id="username" placeholder="Enter your username" onkeyup="validateName()"/>
           <span id="name-error" class="error">Name is required</span>
         </div>
         <div class="input-group">
           <label for="email">Email</label>
-          <input type="email" id="email" placeholder="Enter your email" />
+          <input type="email" id="email" placeholder="Enter your email" onkeyup="validateEmail()"/>
           <span id="email-error" class="error">Email is required</span>
         </div>
         <div class="input-group">
@@ -41,5 +41,6 @@
         <span id="submit-error" class="error">Please fix the error</span>
       </form>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
