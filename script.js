@@ -30,7 +30,22 @@ function validateEmail() {
         emailErr.innerHTML = 'Enter valid email';
         return false;
         }
-    emailErr.innerHTML = 'valid';
+    emailErr.innerHTML = '<i class="fas fa-check-circle"></i>';
     return true;
 }
 
+function ValidatePhone(){
+    const phone= document.getElementById('phone').value;
+    
+    if(phone.length == 0){
+        phoneErr.style.display = 'block';
+        phoneErr.innerHTML = 'Phone number is required';
+        return false;
+    }
+    if(!phone.length == 10){
+        phoneErr.innerHTML = 'Phone number must be of 10 digits only';
+        return false;
+    }
+    phoneErr.innerHTML = '<i class="fas fa-check-circle"></i>';
+    return true;
+}

@@ -26,14 +26,14 @@
         </div>
         <div class="input-group">
           <label for="phone">Phone Number</label>
-          <input type="text" id="phone" placeholder="Enter your phone number" />
+          <input type="text" id="phone" placeholder="Enter your phone number" onkeyup="validatePhone()"/>
           <span id="phone-error" class="error">Phone number is required</span>
         </div>
         <div class="input-group">
           <label for="message">Message</label>
           <textarea
             id="message"
-            placeholder="Enter your message"
+            placeholder="Enter your message" onkeyup="validateMessage()"
           ></textarea>
           <span id="msg-error" class="error">Message is required</span>
         </div>
