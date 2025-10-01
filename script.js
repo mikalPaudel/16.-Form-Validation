@@ -70,7 +70,7 @@ function validateMessage(){
         return false;
     }
     if(left>0){
-        messageErr.innerHTML= `You have ${left} words left`;
+        messageErr.innerHTML= `${left} more characters required`;
         return false;
     }
     messageErr.innerHTML = '<i class="fas fa-check-circle"></i>';
