@@ -16,11 +16,10 @@ body{
     background: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 500px;
+    width: 700px;
     gap: 30px;
-    margin: 50px auto;
+    margin: 50px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
@@ -35,16 +34,17 @@ body{
 }
 
 form{
-    width: 400px;
-    padding-bottom: 20px;
+    /* position: relative; */
+    padding-bottom: 30px;
     display: flex;
     flex-direction: column;
     gap: 5px;
-    /* align-items: center; */
+    width: 80%;
+    align-items: center;
 }
 
 label{
-    width: 100%;
+    width: 25%;
     display: flex;
     justify-content: flex-start;
     font-size: 18px;
@@ -54,20 +54,26 @@ label{
     display: block;
     font-style: italic;
 }
-.input-group{
-    display: flex;
-    flex-direction: column;
+.input-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  gap: 15px;
 }
 
-input, textarea{
-    border-style: none;
-    width: 100%;
-    margin: 10px 0;
-    padding: 8px 0px;
-    border-bottom: 2px solid #ccc;
-    outline: none;
-    font-size: 16px;
+input, textarea {
+  flex: 1;
+  border-style: none;
+  margin: 10px 0;
+  padding: 8px 0;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  font-size: 16px;
 }
+
+
 input:focus, textarea:focus{
     border-bottom-color: #777;
     outline: none;
@@ -91,12 +97,24 @@ button:hover{
 
 .error{
     display: none;
+    position: absolute;
     font-style: italic;
+    right: 17px;
+    bottom: 20px;
+    /* border-bottom: 2px solid #ccc; */
+    /* padding: 8px 0px; */
     color: red;
-    text-align: end;
+    padding-left: 10px;
+    text-wrap: nowrap;
 }
 
 #submit-error{
     text-align: left;
     margin: 0px;
+}
+
+.input-group i{
+    background: transparent;
+    color: lightseagreen;
+    font-size: 1.7em;
 }
